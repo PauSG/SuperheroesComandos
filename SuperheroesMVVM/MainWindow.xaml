@@ -69,7 +69,7 @@
         <StackPanel DockPanel.Dock="Bottom"
                             Orientation="Horizontal"
                             HorizontalAlignment="Center">
-            <Button Command="{Binding Path=AnteriorCommand}">
+            <Button Command="{Binding Path=AnteriorCommand}" Background="{Binding Path=HeroeActual.Heroe, Converter={StaticResource conversorFondo}}" Template="{DynamicResource ButtonControlTemplate1}">
                 <Image x:Name="leftImage"
                            Style="{StaticResource flechas}"
                            MouseLeftButtonUp="leftImage_MouseLeftButtonUp">
@@ -85,8 +85,8 @@
                                Style="{StaticResource contador}"
                                Margin="0,0,5,5"
                                Text="{Binding Path=Total}"></TextBlock>
-            <Button Command="{Binding Path=SiguienteCommand}">
-                <Image x:Name="rightImage"
+            <Button Command="{Binding Path=SiguienteCommand}" Background="{Binding Path=HeroeActual.Heroe, Converter={StaticResource conversorFondo}}" Template="{DynamicResource ButtonControlTemplate1}">
+                <Image  x:Name="rightImage"
                            Style="{StaticResource flechas}"
                            RenderTransformOrigin="0.5,0.5"
                            MouseLeftButtonUp="rightImage_MouseLeftButtonUp">
